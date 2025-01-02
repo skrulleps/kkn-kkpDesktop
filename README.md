@@ -63,10 +63,9 @@ Proyek ini adalah aplikasi pendaftaran Kuliah Kerja Profesi (KKP) dan Kuliah Ker
 - Eka Putu Miharja  
 - Muhammad Zaenal Abby S.
 
-## Lisensi
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+
 
 ## Kontak
 Untuk informasi lebih lanjut, silakan hubungi:
-- Email: example@example.com
-- Telepon: +62 812-3456-7890
+- Email: fadhlantuhairi@gmai.com
+

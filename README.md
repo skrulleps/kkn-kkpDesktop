@@ -36,14 +36,14 @@ Proyek ini adalah aplikasi pendaftaran Kuliah Kerja Profesi (KKP) dan Kuliah Ker
 ## Screenshot Aplikasi
 ### Halaman Login
 ![Halaman Login](https://github.com/skrulleps/kkn-kkpDesktop/blob/main/Menu%20Utama%20Sebelum%20Login.png)
+![Frame Login](https://github.com/skrulleps/kkn-kkpDesktop/blob/main/Login.png)
 
 ### Dashboard Admin
-![Dashboard Admin](images/admin_dashboard.png)
+![Dashboard Admin](https://github.com/skrulleps/kkn-kkpDesktop/blob/main/Menu%20Utama.png)
 
 ### Form Pendaftaran KKN/KKP
-![Form Pendaftaran KKN/KKP](images/registration_form.png)
+![Form Pendaftaran KKN/KKP](https://github.com/skrulleps/kkn-kkpDesktop/blob/main/FDaftarkkp.jpg)
 
-> **Catatan**: Pastikan Anda menyimpan file gambar di folder `images` di dalam repository.
 
 ## Struktur Proyek
 - `src/koneksi/`: Konfigurasi koneksi database.

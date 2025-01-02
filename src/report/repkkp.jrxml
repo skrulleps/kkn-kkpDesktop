@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.2100000000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset 1">
+		<queryString language="SQL">
+			<![CDATA[SELECT pendaftaran_kkp.id_pendaftaran, 
+       mahasiswa.nim AS nim_mahasiswa, 
+       mahasiswa.nama AS nama_mahasiswa, 
+       tempat_kkp.nama_perusahaan, 
+       tempat_kkp.tgl_mulai,
+       tempat_kkp.tgl_berakhir,
+       tempat_kkp.nama_pembimbing,
+       pendaftaran_kkp.tgl_daftar
+FROM pendaftaran_kkp
+INNER JOIN mahasiswa ON pendaftaran_kkp.id_mahasiswa = mahasiswa.id_mahasiswa
+INNER JOIN tempat_kkp ON pendaftaran_kkp.id_tempat = tempat_kkp.id_tempat]]>
+		</queryString>
+		<field name="id_pendaftaran" class="java.lang.Integer"/>
+		<field name="nim_mahasiswa" class="java.lang.String"/>
+		<field name="nama_mahasiswa" class="java.lang.String"/>
+		<field name="nama_perusahaan" class="java.lang.String"/>
+		<field name="tgl_mulai" class="java.sql.Date"/>
+		<field name="tgl_berakhir" class="java.sql.Date"/>
+		<field name="nama_pembimbing" class="java.lang.String"/>
+		<field name="tgl_daftar" class="java.sql.Date"/>
+	</subDataset>
+	<parameter name="kkp" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT pendaftaran_kkp.id_pendaftaran, 
+       mahasiswa.nim AS nim_mahasiswa, 
+       mahasiswa.nama AS nama_mahasiswa,
+     mahasiswa.jurusan, 
+       tempat_kkp.nama_perusahaan, 
+       tempat_kkp.tgl_mulai,
+       tempat_kkp.tgl_berakhir,
+       tempat_kkp.nama_pembimbing,
+       pendaftaran_kkp.tgl_daftar
+FROM pendaftaran_kkp
+INNER JOIN mahasiswa ON pendaftaran_kkp.id_mahasiswa = mahasiswa.id_mahasiswa
+INNER JOIN tempat_kkp ON pendaftaran_kkp.id_tempat = tempat_kkp.id_tempat
+Where tempat_kkp.nama_perusahaan = $P{kkp}]]>
+	</queryString>
+	<field name="id_pendaftaran" class="java.lang.Integer"/>
+	<field name="nim_mahasiswa" class="java.lang.String"/>
+	<field name="nama_mahasiswa" class="java.lang.String"/>
+	<field name="jurusan" class="java.lang.String"/>
+	<field name="nama_perusahaan" class="java.lang.String"/>
+	<field name="tgl_mulai" class="java.sql.Date"/>
+	<field name="tgl_berakhir" class="java.sql.Date"/>
+	<field name="nama_pembimbing" class="java.lang.String"/>
+	<field name="tgl_daftar" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<line>
+				<reportElement x="4" y="60" width="798" height="1"/>
+			</line>
+			<image>
+				<reportElement x="285" y="-1" width="57" height="59"/>
+				<imageExpression class="java.lang.String"><![CDATA["D:\\MATA KULIAH\\SEMESTER 4\\OOP 2\\UAS_KKN\\src\\images\\LogoDoang.jpeg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="358" y="10" width="143" height="26"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Global Institute]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="26" width="195" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[of Technology and Business]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="20" width="42" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hal :]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="65" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="65" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="4" y="-16" width="798" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="304" y="40" width="210" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Daftar Mahasiswa KKPTerdaftar]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="2" width="36" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="138" y="2" width="101" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="239" y="2" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="339" y="2" width="147" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="2" width="35" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="2" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Mahasiswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="2" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jurusan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="339" y="2" width="147" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perusahaan]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="486" y="2" width="110" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="696" y="2" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="596" y="2" width="100" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="486" y="2" width="110" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pembimbing Perusahaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="2" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tgl Mulai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="696" y="2" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tgl Berakhir]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="46" y="2" width="92" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="46" y="2" width="92" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIM]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="139" y="2" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nama_mahasiswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="2" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{jurusan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="2" width="147" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nama_perusahaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="2" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nama_pembimbing}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="621" y="3" width="44" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{tgl_mulai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="724" y="3" width="42" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{tgl_berakhir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="46" y="2" width="92" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nim_mahasiswa}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="12" y="23" width="783" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="11" y="4" width="35" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="62">
+			<staticText>
+				<reportElement x="304" y="14" width="208" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tangerang, Banten]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="34" width="208" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2023/2024]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="0" width="208" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Aria Santika No. 43, Margasari]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+</jasperReport>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>D:\MATA KULIAH\SEMESTER 4\Projek KKN-KKP\bin\UAS_KKNP.jar</jar>
+  <outfile>D:\MATA KULIAH\SEMESTER 4\Projek KKN-KKP\bin\Daftar_kkn-kkp.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>D:\MATA KULIAH\SEMESTER 4\Projek KKN-KKP\bin\Global_Institute-Logo.ico</icon>
+  <jre>
+    <path>\jre1.8.0_111</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion>1.8.0_111</minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+</launch4jConfig>

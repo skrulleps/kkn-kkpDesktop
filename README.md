@@ -35,7 +35,7 @@ Proyek ini adalah aplikasi pendaftaran Kuliah Kerja Profesi (KKP) dan Kuliah Ker
 
 ## Screenshot Aplikasi
 ### Halaman Login
-![Halaman Login]([images/login_page.png](https://github.com/skrulleps/kkn-kkpDesktop/blob/main/Menu%20Utama%20Sebelum%20Login.png))
+![Halaman Login](https://github.com/skrulleps/kkn-kkpDesktop/blob/main/Menu%20Utama%20Sebelum%20Login.png)
 
 ### Dashboard Admin
 ![Dashboard Admin](images/admin_dashboard.png)
